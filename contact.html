@@ -1,5 +1,6 @@
 <!doctype html>
 <html class="no-js" lang="zxx">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -24,7 +25,9 @@
     <link rel="stylesheet" href="assets/css/slick.css">
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
+
 <body>
     <!-- ? Preloader Start -->
     <div id="preloader-active">
@@ -45,13 +48,14 @@
                 <!-- Logo -->
                 <div class="header-left">
                     <div class="logo">
-                        <a href="index.html"><img src="assets/img/logo/snow-white-high-resolution-logo (3).png" alt=""></a>
+                        <a href="index.html"><img src="assets/img/logo/snow-white-high-resolution-logo (3).png"
+                                alt=""></a>
                     </div>
                     <div class="menu-wrapper  d-flex align-items-center">
                         <!-- Main-menu -->
                         <div class="main-menu d-none d-lg-block">
-                            <nav> 
-                                <ul id="navigation">                                                                                          
+                            <nav>
+                                <ul id="navigation">
                                     <li><a href="index.html">Home</a></li>
                                     <li><a href="about.html">About</a></li>
                                     <li><a href="services.html">Services</a></li>
@@ -62,14 +66,14 @@
                                             <li><a href="elements.html">Element</a></li>
                                         </ul>
                                     </li> -->
-                                    <li  class="active"><a href="contact.html">Contact</a></li>
+                                    <li class="active"><a href="contact.html">Contact</a></li>
                                 </ul>
                             </nav>
                         </div>
                     </div>
-                </div> 
+                </div>
                 <div class="header-right d-none d-lg-block">
-                    <a href="#" class="header-btn1"><img src="assets/img/icon/call.png" alt=""> (08) 728 256 266</a>
+                    <a href="#" class="header-btn1"><img src="assets/img/icon/call.png" alt=""> (+91) 90977 93641</a>
                     <a href="#" class="header-btn2">Make an Appointment</a>
                 </div>
                 <!-- Mobile Menu -->
@@ -105,31 +109,41 @@
                         <h2 class="contact-title">Get in Touch</h2>
                     </div>
                     <div class="col-lg-8">
-                        <form class="form-contact contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
+                        <form class="form-contact contact_form" id="contactForm" novalidate="novalidate">
                             <div class="row">
                                 <div class="col-12">
                                     <div class="form-group">
-                                        <textarea class="form-control w-100" name="message" id="message" cols="30" rows="9" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Message'" placeholder=" Enter Message"></textarea>
+                                        <textarea class="form-control w-100" name="message" id="message" cols="30"
+                                            rows="9" onfocus="this.placeholder = ''"
+                                            onblur="this.placeholder = 'Enter Message'"
+                                            placeholder=" Enter Message"></textarea>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <input class="form-control valid" name="name" id="name" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" placeholder="Enter your name">
+                                        <input class="form-control valid" name="name" id="name" type="text"
+                                            onfocus="this.placeholder = ''"
+                                            onblur="this.placeholder = 'Enter your name'" placeholder="Enter your name">
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <input class="form-control valid" name="email" id="email" type="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" placeholder="Email">
+                                        <input class="form-control valid" name="email" id="email" type="email"
+                                            onfocus="this.placeholder = ''"
+                                            onblur="this.placeholder = 'Enter email address'" placeholder="Email">
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-group">
-                                        <input class="form-control" name="subject" id="subject" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Subject'" placeholder="Enter Subject">
+                                        <input class="form-control" name="subject" id="subject" type="text"
+                                            onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Subject'"
+                                            placeholder="Enter Subject">
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group mt-3">
-                                <button type="submit" class="button button-contactForm boxed-btn">Send</button>
+                                <button type="button" class="button button-contactForm boxed-btn"
+                                    onclick="sendEmail()">Send</button>
                             </div>
                         </form>
                     </div>
@@ -151,7 +165,7 @@
                         <div class="media contact-info">
                             <span class="contact-info__icon"><i class="ti-email"></i></span>
                             <div class="media-body">
-                                <h3>snowhite.cloud</h3>
+                                <h3>snowwhite.infomail@gmail.com</h3>
                                 <p>Send us your query anytime!</p>
                             </div>
                         </div>
@@ -167,117 +181,150 @@
             <div class="container">
                 <div class="row d-flex justify-content-between">
                     <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
-                     <div class="single-footer-caption mb-50">
-                       <div class="single-footer-caption mb-30">
-                        <!-- logo -->
-                        <div class="footer-logo mb-35">
-                            <a href="index.html"><img src="assets/img/logo/logo2_footer.png" alt=""></a>
-                        </div>
-                        <div class="footer-tittle">
-                            <div class="footer-pera">
-                                <p>At our core, we believe in transforming everyday tasks into extraordinary experiences. With a commitment to quality and customer satisfaction, we strive to elevate the standards of service in everything we do.</p>
+                        <div class="single-footer-caption mb-50">
+                            <div class="single-footer-caption mb-30">
+                                <!-- logo -->
+                                <div class="footer-logo mb-35">
+                                    <a href="index.html"><img
+                                            src="assets/img/logo/snow-white-high-resolution-logo (3).png" alt=""></a>
+                                </div>
+                                <div class="footer-tittle">
+                                    <div class="footer-pera">
+                                        <p>
+                                            For over 35 years, our shop has been a trusted name in laundry services.
+                                            Established with a commitment to excellence, we have continually evolved to
+                                            offer the best in garment care. From humble beginnings to becoming a
+                                            cornerstone of our community, our history is one of dedication, quality, and
+                                            customer satisfaction.
+                                        </p>
+                                    </div>
+
+                                </div>
+                                <!-- social -->
+                                <div class="footer-social">
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="https://bit.ly/sai4ull"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                                </div>
                             </div>
                         </div>
-                        
-                        <!-- social -->
-                        <div class="footer-social">
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="https://bit.ly/sai4ull"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6">
+                        <div class="single-footer-caption mb-50">
+                            <div class="footer-tittle">
+                                <h4>Services </h4>
+                                <ul>
+                                    <li><a href="#">- Dry Cleaning</a></li>
+                                    <li><a href="#">- Dry Clean</a></li>
+                                    <li><a href="#">- Ironing Services</a></li>
+                                    <li><a href="#">- Laundry App(Comming Soon)</a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6">
-                <div class="single-footer-caption mb-50">
-                    <div class="footer-tittle">
-                        <h4>Services </h4>
-                        <ul>
-                            <li><a href="#">- Dry Cleaning</a></li>
-                            <li><a href="#">- Dry Clean</a></li>
-                            <li><a href="#">- Ironing Services</a></li>
-                            <li><a href="#">- Laundry App</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6">
-                <div class="single-footer-caption mb-50">
-                    <div class="footer-tittle">
-                        <h4>Get in touch</h4>
-                        <ul>
-                            <li class="number"><a href="#">(+91) 90977 93641</a></li>
-                            <li><a href="#">snowwhite1990@gmail.com</a></li>
-                            <li><a href="#">Dr.R.P Road,Mahadev Talkies,Bhagalpur,Bihar,812002</a></li>
-                        </ul>
+                    <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6">
+                        <div class="single-footer-caption mb-50">
+                            <div class="footer-tittle">
+                                <h4>Get in touch</h4>
+                                <ul>
+                                    <li class="number"><a href="#">(+91) 90977 93641</a></li>
+                                    <li><a href="#">snowwhite.infomail@gmail.com</a></li>
+                                    <li><a href="#">Dr.R.P Road,Mahadev Talkies,Bhagalpur,Bihar,812002</a></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- footer-bottom area -->
+        <div class="footer-bottom-area section-bg2" data-background="assets/img/gallery/footer-bg.png">
+            <div class="container">
+                <div class="footer-border">
+                    <div class="row d-flex align-items-center">
+                        <div class="col-xl-12 ">
+                            <div class="footer-copy-right text-center">
+                                <p>
+                                    Copyright &copy;
+                                    <script>document.write(new Date().getFullYear());</script> All rights reserved |
+                                    This website is made with <i class="fa fa-heart" aria-hidden="true"></i>
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <!-- Footer End-->
+    </footer>
+    <!-- Scroll Up -->
+    <div id="back-top">
+        <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
     </div>
-</div>
-<!-- footer-bottom area -->
-<div class="footer-bottom-area section-bg2" data-background="assets/img/gallery/footer-bg.png">
-    <div class="container">
-        <div class="footer-border">
-           <div class="row d-flex align-items-center">
-               <div class="col-xl-12 ">
-                   <div class="footer-copy-right text-center">
-                       <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                          Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i></a>
-                          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-  <!-- Footer End-->
-</footer>
-<!-- Scroll Up -->
-<div id="back-top" >
-    <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
-</div>
-<!-- JS here -->
+    <!-- JS here -->
+    <script>
+        function sendEmail() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
 
-<script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
-<!-- Jquery, Popper, Bootstrap -->
-<script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
-<script src="./assets/js/popper.min.js"></script>
-<script src="./assets/js/bootstrap.min.js"></script>
-<!-- Jquery Mobile Menu -->
-<script src="./assets/js/jquery.slicknav.min.js"></script>
+            axios.post('https://snowwhite.cloud/api/send-email', {
+                name,
+                email,
+                subject,
+                message
+            })
+                .then(response => {
+                    alert('Email sent successfully');
+                })
+                .catch(error => {
+                    console.error('There was an error sending the email!', error);
+                });
+        }
+    </script>
 
-<!-- Jquery Slick , Owl-Carousel Plugins -->
-<script src="./assets/js/owl.carousel.min.js"></script>
-<script src="./assets/js/slick.min.js"></script>
-<!-- One Page, Animated-HeadLin -->
-<script src="./assets/js/wow.min.js"></script>
-<script src="./assets/js/animated.headline.js"></script>
-<script src="./assets/js/jquery.magnific-popup.js"></script>
+    <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
+    <!-- Jquery, Popper, Bootstrap -->
+    <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="./assets/js/popper.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <!-- Jquery Mobile Menu -->
+    <script src="./assets/js/jquery.slicknav.min.js"></script>
 
-<!-- Date Picker -->
-<script src="./assets/js/gijgo.min.js"></script>
-<!-- Nice-select, sticky -->
-<script src="./assets/js/jquery.nice-select.min.js"></script>
-<script src="./assets/js/jquery.sticky.js"></script>
+    <!-- Jquery Slick , Owl-Carousel Plugins -->
+    <script src="./assets/js/owl.carousel.min.js"></script>
+    <script src="./assets/js/slick.min.js"></script>
+    <!-- One Page, Animated-HeadLin -->
+    <script src="./assets/js/wow.min.js"></script>
+    <script src="./assets/js/animated.headline.js"></script>
+    <script src="./assets/js/jquery.magnific-popup.js"></script>
 
-<!-- counter , waypoint,Hover Direction -->
-<script src="./assets/js/jquery.counterup.min.js"></script>
-<script src="./assets/js/waypoints.min.js"></script>
-<script src="./assets/js/jquery.countdown.min.js"></script>
-<script src="./assets/js/hover-direction-snake.min.js"></script>
+    <!-- Date Picker -->
+    <script src="./assets/js/gijgo.min.js"></script>
+    <!-- Nice-select, sticky -->
+    <script src="./assets/js/jquery.nice-select.min.js"></script>
+    <script src="./assets/js/jquery.sticky.js"></script>
 
-<!-- contact js -->
-<script src="./assets/js/contact.js"></script>
-<script src="./assets/js/jquery.form.js"></script>
-<script src="./assets/js/jquery.validate.min.js"></script>
-<script src="./assets/js/mail-script.js"></script>
-<script src="./assets/js/jquery.ajaxchimp.min.js"></script>
+    <!-- counter , waypoint,Hover Direction -->
+    <script src="./assets/js/jquery.counterup.min.js"></script>
+    <script src="./assets/js/waypoints.min.js"></script>
+    <script src="./assets/js/jquery.countdown.min.js"></script>
+    <script src="./assets/js/hover-direction-snake.min.js"></script>
 
-<!-- Jquery Plugins, main Jquery -->	
-<script src="./assets/js/plugins.js"></script>
-<script src="./assets/js/main.js"></script>
+    <!-- contact js -->
+    <script src="./assets/js/contact.js"></script>
+    <script src="./assets/js/jquery.form.js"></script>
+    <script src="./assets/js/jquery.validate.min.js"></script>
+    <script src="./assets/js/mail-script.js"></script>
+    <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
+
+    <!-- Jquery Plugins, main Jquery -->
+    <script src="./assets/js/plugins.js"></script>
+    <script src="./assets/js/main.js"></script>
 
 </body>
+
 </html>
